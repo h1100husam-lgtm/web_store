@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Reda Store</title>
+    <link rel="icon" href="img/icon.png">
+
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/pages.css">
+</head>
+<body>
+
+    <header>
+        <div class="top_header">
+            <div class="container">
+                <a href="index.html" class="logo"> <img src="img/logo.png" alt="Reda Store logo"></a>
+
+                <form action="" class="search_box">
+                    <div class="select_box">
+                        <select id="category" name="category">
+                            <option value="All Categories">All Categories</option>
+                            <option value="electronics">Electronics &amp; Digital</option>
+                            <option value="mobiles">Phones &amp; Tablets</option>
+                            <option value="appliances">Home Appliances</option>
+                        </select>
+                    </div>
+                    <input type="text" name="search" id="search" placeholder="Search for Products" required>
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
+                <div class="header_icons">
+                    <div class="icon">
+                        <a href="wishlist.html"><i class="fa-regular fa-heart"></i><span class="count count_favourite">0</span></a>
+                    </div>
+                    <div onclick="open_close_cart()" class="icon">
+                        <i class="fa-solid fa-cart-shopping"></i><span class="count count_item_header">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_header">
+            <div class="container">
+                <nav class="nav">
+                    <span onclick="open_Menu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
+                    <div class="category_nav">
+                        <div onclick="Open_Categ_list()" class="category_btn">
+                            <i class="fa-solid fa-bars"></i>
+                            <p>Browse Category</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="category_nav_list"></div>
+                    </div>
+                    <ul class="nav_links">
+                        <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="about.html">About</a></li>
+                        <li><a href="shop.html">Accesories</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="login_signup btns"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page_head">
+        <div class="container">
+            <h1>About Reda Store</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a><i class="fa-solid fa-angle-right"></i><span>About</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="page_section">
+        <div class="container">
+            <div class="form_card narrow_panel">
+                <h2 class="panel_title">Who we are</h2>
+                <p class="lead_text">
+                    Reda Store is a front-end demo project built with <b>HTML</b>, <b>CSS</b> and <b>JavaScript</b>.
+                    It shows a complete online shopping experience - browsing, searching, filtering, a cart, a wishlist,
+                    accounts, login and checkout - without any server or database.
+                </p>
+                <p class="lead_text">
+                    Everything you see is stored locally in your browser using <b>localStorage</b>, so you can experiment
+                    freely: create an account, place orders, and reset any time by clearing the browser storage.
+                </p>
+
+                <div class="stat_row stat_row_last">
+                    <div class="stat_box">
+                        <div class="icon_circle"><i class="fa-solid fa-box"></i></div>
+                        <div><div class="num" id="about_products">0</div><div class="label">Products</div></div>
+                    </div>
+                    <div class="stat_box">
+                        <div class="icon_circle"><i class="fa-solid fa-layer-group"></i></div>
+                        <div><div class="num" id="about_categories">0</div><div class="label">Categories</div></div>
+                    </div>
+                    <div class="stat_box">
+                        <div class="icon_circle"><i class="fa-solid fa-code"></i></div>
+                        <div><div class="num">100%</div><div class="label">HTML / CSS / JS</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="bottom_footer">
+            <div class="container">
+                <p>&copy; <span>Reda Store.</span> All Rights Reserved.</p>
+                <div class="payment_img"><img src="img/payment_method.png" alt=""></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/data.js"></script>
+    <script src="JS/store.js"></script>
+    <script src="JS/pages.js"></script>
+    <script>
+        document.getElementById("about_products").textContent = Store.PRODUCTS.length;
+        document.getElementById("about_categories").textContent = Store.CATEGORIES.length;
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Reda Store</title>
+    <link rel="icon" href="img/icon.png">
+
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/pages.css">
+</head>
+<body>
+
+    <header>
+        <div class="top_header">
+            <div class="container">
+                <a href="index.html" class="logo"> <img src="img/logo.png" alt="Reda Store logo"></a>
+
+                <form action="" class="search_box">
+                    <div class="select_box">
+                        <select id="category" name="category">
+                            <option value="All Categories">All Categories</option>
+                            <option value="electronics">Electronics &amp; Digital</option>
+                            <option value="mobiles">Phones &amp; Tablets</option>
+                            <option value="appliances">Home Appliances</option>
+                        </select>
+                    </div>
+                    <input type="text" name="search" id="search" placeholder="Search for Products" required>
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
+                <div class="header_icons">
+                    <div class="icon">
+                        <a href="wishlist.html"><i class="fa-regular fa-heart"></i><span class="count count_favourite">0</span></a>
+                    </div>
+                    <div onclick="open_close_cart()" class="icon">
+                        <i class="fa-solid fa-cart-shopping"></i><span class="count count_item_header">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_header">
+            <div class="container">
+                <nav class="nav">
+                    <span onclick="open_Menu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
+                    <div class="category_nav">
+                        <div onclick="Open_Categ_list()" class="category_btn">
+                            <i class="fa-solid fa-bars"></i>
+                            <p>Browse Category</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="category_nav_list"></div>
+                    </div>
+                    <ul class="nav_links">
+                        <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="shop.html">Accesories</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="login_signup btns"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page_section auth_section">
+        <div class="container">
+            <div class="auth_wrap">
+
+                <div class="auth_form_side">
+                    <h1>Login to your account</h1>
+                    <p class="sub">Enter your email and password to continue.</p>
+
+                    <div class="demo_note">
+                        <b>Demo account:</b> demo@redastore.com &nbsp;/&nbsp; password: <b>123456</b>
+                    </div>
+
+                    <div class="alert_error" id="auth_error"></div>
+
+                    <form id="login_form" novalidate>
+                        <div class="input_group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="example@mail.com" autocomplete="username">
+                        </div>
+
+                        <div class="input_group">
+                            <label for="password">Password</label>
+                            <div class="password_box">
+                                <input type="password" id="password" placeholder="Your password" autocomplete="current-password">
+                                <span class="toggle_pass" onclick="var p=document.getElementById('password'); p.type = p.type==='password' ? 'text':'password';"><i class="fa-regular fa-eye"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="check_row">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Keep me logged in</label>
+                        </div>
+
+                        <button type="submit" class="btn btn_block">Login <i class="fa-solid fa-right-to-bracket"></i></button>
+                    </form>
+
+                    <div class="auth_switch">
+                        Don't have an account? <a href="signup.html">Create one now</a>
+                    </div>
+                </div>
+
+                <div class="auth_side_banner">
+                    <h3>Welcome back to Reda Store</h3>
+                    <p>Track your orders, keep your wishlist in one place and check out faster next time.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-box"></i> Follow your order status</li>
+                        <li><i class="fa-solid fa-heart"></i> Save products for later</li>
+                        <li><i class="fa-solid fa-bolt"></i> One-click re-order</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="bottom_footer">
+            <div class="container">
+                <p>&copy; <span>Reda Store.</span> All Rights Reserved.</p>
+                <div class="payment_img"><img src="img/payment_method.png" alt=""></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/data.js"></script>
+    <script src="JS/store.js"></script>
+    <script src="JS/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Reda Store</title>
+    <link rel="icon" href="img/icon.png">
+
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/pages.css">
+</head>
+<body>
+
+    <header>
+        <div class="top_header">
+            <div class="container">
+                <a href="index.html" class="logo"> <img src="img/logo.png" alt="Reda Store logo"></a>
+
+                <form action="" class="search_box">
+                    <div class="select_box">
+                        <select id="category" name="category">
+                            <option value="All Categories">All Categories</option>
+                            <option value="electronics">Electronics &amp; Digital</option>
+                            <option value="mobiles">Phones &amp; Tablets</option>
+                            <option value="appliances">Home Appliances</option>
+                        </select>
+                    </div>
+                    <input type="text" name="search" id="search" placeholder="Search for Products" required>
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
+                <div class="header_icons">
+                    <div class="icon">
+                        <a href="wishlist.html"><i class="fa-regular fa-heart"></i><span class="count count_favourite">0</span></a>
+                    </div>
+                    <div onclick="open_close_cart()" class="icon">
+                        <i class="fa-solid fa-cart-shopping"></i><span class="count count_item_header">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_header">
+            <div class="container">
+                <nav class="nav">
+                    <span onclick="open_Menu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
+                    <div class="category_nav">
+                        <div onclick="Open_Categ_list()" class="category_btn">
+                            <i class="fa-solid fa-bars"></i>
+                            <p>Browse Category</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="category_nav_list"></div>
+                    </div>
+                    <ul class="nav_links">
+                        <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="shop.html">Accesories</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li class="active"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="login_signup btns"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page_head">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a><i class="fa-solid fa-angle-right"></i><span>Contact</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="page_section">
+        <div class="container two_col">
+
+            <div class="form_card col_main">
+                <h2 class="panel_title">Send us a message</h2>
+
+                <form id="contact_form" novalidate>
+                    <div class="input_group">
+                        <label for="c_name">Your Name</label>
+                        <input type="text" id="c_name" placeholder="John Doe">
+                    </div>
+                    <div class="input_group">
+                        <label for="c_email">Email Address</label>
+                        <input type="email" id="c_email" placeholder="example@mail.com">
+                    </div>
+                    <div class="input_group">
+                        <label for="c_message">Message</label>
+                        <textarea id="c_message" placeholder="How can we help?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn_block">Send Message</button>
+                </form>
+            </div>
+
+            <div class="form_card col_side">
+                <h2 class="panel_title">Store info</h2>
+                <div class="product_meta info_list">
+                    <p><span>Phone:</span> +967 712 345 678</p>
+                    <p><span>Email:</span> support@redastore.com</p>
+                    <p><span>Address:</span> Hadda Street, Building 24</p>
+                    <p><span>City:</span> Sanaa, Yemen</p>
+                    <p><span>Hours:</span> Saturday - Thursday, 9:00 - 18:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="bottom_footer">
+            <div class="container">
+                <p>&copy; <span>Reda Store.</span> All Rights Reserved.</p>
+                <div class="payment_img"><img src="img/payment_method.png" alt=""></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/data.js"></script>
+    <script src="JS/store.js"></script>
+    <script src="JS/pages.js"></script>
+</body>
+</html>

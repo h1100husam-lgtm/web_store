@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Reda Store</title>
+    <link rel="icon" href="img/icon.png">
+
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/pages.css">
+</head>
+<body>
+
+    <header>
+        <div class="top_header">
+            <div class="container">
+                <a href="index.html" class="logo"> <img src="img/logo.png" alt="Reda Store logo"></a>
+
+                <form action="" class="search_box">
+                    <div class="select_box">
+                        <select id="category" name="category">
+                            <option value="All Categories">All Categories</option>
+                            <option value="electronics">Electronics &amp; Digital</option>
+                            <option value="mobiles">Phones &amp; Tablets</option>
+                            <option value="appliances">Home Appliances</option>
+                        </select>
+                    </div>
+                    <input type="text" name="search" id="search" placeholder="Search for Products" required>
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
+                <div class="header_icons">
+                    <div class="icon">
+                        <a href="wishlist.html"><i class="fa-regular fa-heart"></i><span class="count count_favourite">0</span></a>
+                    </div>
+                    <div onclick="open_close_cart()" class="icon">
+                        <i class="fa-solid fa-cart-shopping"></i><span class="count count_item_header">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_header">
+            <div class="container">
+                <nav class="nav">
+                    <span onclick="open_Menu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
+                    <div class="category_nav">
+                        <div onclick="Open_Categ_list()" class="category_btn">
+                            <i class="fa-solid fa-bars"></i>
+                            <p>Browse Category</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="category_nav_list"></div>
+                    </div>
+                    <ul class="nav_links">
+                        <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="shop.html">Accesories</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="login_signup btns"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page_section auth_section">
+        <div class="container">
+            <div class="auth_wrap">
+
+                <div class="auth_form_side">
+                    <h1>Create your account</h1>
+                    <p class="sub">It takes less than a minute.</p>
+
+                    <div class="alert_error" id="auth_error"></div>
+
+                    <form id="signup_form" novalidate>
+                        <div class="input_group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="John Doe" autocomplete="name">
+                        </div>
+
+                        <div class="input_row">
+                            <div class="input_group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="example@mail.com" autocomplete="username">
+                            </div>
+                            <div class="input_group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+967 712 345 678" autocomplete="tel">
+                            </div>
+                        </div>
+
+                        <div class="input_group">
+                            <label for="password">Password</label>
+                            <div class="password_box">
+                                <input type="password" id="password" placeholder="At least 6 characters" autocomplete="new-password">
+                                <span class="toggle_pass" id="toggle_pass"><i class="fa-regular fa-eye"></i></span>
+                            </div>
+                            <div class="strength"><span id="strength_bar"></span></div>
+                            <div class="strength_text" id="strength_text"></div>
+                        </div>
+
+                        <div class="input_group">
+                            <label for="confirm_password">Confirm Password</label>
+                            <input type="password" id="confirm_password" placeholder="Repeat your password" autocomplete="new-password">
+                        </div>
+
+                        <div class="check_row">
+                            <input type="checkbox" id="terms">
+                            <label for="terms">I accept the terms and conditions</label>
+                        </div>
+
+                        <button type="submit" class="btn btn_block">Sign UP <i class="fa-solid fa-user-plus"></i></button>
+                    </form>
+
+                    <div class="auth_switch">
+                        Already have an account? <a href="login.html">Login here</a>
+                    </div>
+                </div>
+
+                <div class="auth_side_banner">
+                    <h3>Create a free account</h3>
+                    <p>This is a front-end demo, so accounts are saved in your browser only and nothing is sent to a server.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-user-shield"></i> Your data stays on your device</li>
+                        <li><i class="fa-solid fa-clock-rotate-left"></i> Demo orders are ready to explore</li>
+                        <li><i class="fa-solid fa-bag-shopping"></i> A full shopping experience</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="bottom_footer">
+            <div class="container">
+                <p>&copy; <span>Reda Store.</span> All Rights Reserved.</p>
+                <div class="payment_img"><img src="img/payment_method.png" alt=""></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/data.js"></script>
+    <script src="JS/store.js"></script>
+    <script src="JS/pages.js"></script>
+</body>
+</html>

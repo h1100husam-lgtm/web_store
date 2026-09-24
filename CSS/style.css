@@ -810,7 +810,7 @@ footer  .bottom_footer .payment_img{
     justify-content: space-between;
     margin-bottom: 30px;
 }
-.cart .bottom_cart .price_cart_toral{
+.cart .bottom_cart .cart_total{
     color: var(--main_color);
     font-size: 20px;
 }
