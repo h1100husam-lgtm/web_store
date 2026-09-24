@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist | Reda Store</title>
+    <link rel="icon" href="img/icon.png">
+
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/pages.css">
+</head>
+<body>
+
+    <div class="cart">
+        <div class="top_cart">
+            <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
+            <span onclick="open_close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+        <div class="items_in_cart" id="cart_items"></div>
+        <div class="bottom_cart">
+            <div class="total">
+                <p>subtotal</p>
+                <p class="cart_total">$0</p>
+            </div>
+            <div class="button_cart">
+                <a href="checkout.html" class="btn_cart btn">Checkout</a>
+                <span onclick="open_close_cart()" class="btn_cart trans_bg btn">Shop More</span>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="top_header">
+            <div class="container">
+                <a href="index.html" class="logo"> <img src="img/logo.png" alt="Reda Store logo"></a>
+
+                <form action="" class="search_box">
+                    <div class="select_box">
+                        <select id="category" name="category">
+                            <option value="All Categories">All Categories</option>
+                            <option value="electronics">Electronics &amp; Digital</option>
+                            <option value="mobiles">Phones &amp; Tablets</option>
+                            <option value="appliances">Home Appliances</option>
+                        </select>
+                    </div>
+                    <input type="text" name="search" id="search" placeholder="Search for Products" required>
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
+                <div class="header_icons">
+                    <div class="icon">
+                        <a href="wishlist.html"><i class="fa-regular fa-heart"></i><span class="count count_favourite">0</span></a>
+                    </div>
+                    <div onclick="open_close_cart()" class="icon">
+                        <i class="fa-solid fa-cart-shopping"></i><span class="count count_item_header">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_header">
+            <div class="container">
+                <nav class="nav">
+                    <span onclick="open_Menu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
+                    <div class="category_nav">
+                        <div onclick="Open_Categ_list()" class="category_btn">
+                            <i class="fa-solid fa-bars"></i>
+                            <p>Browse Category</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="category_nav_list"></div>
+                    </div>
+                    <ul class="nav_links">
+                        <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="shop.html">Accesories</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="login_signup btns"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page_head">
+        <div class="container">
+            <h1>My Wishlist</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a><i class="fa-solid fa-angle-right"></i><span id="wishlist_count">0 items</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="page_section">
+        <div class="container">
+            <p class="notice"><i class="fa-solid fa-heart"></i> Tap the heart on any product to add it here or remove it. Your wishlist is saved in this browser.</p>
+            <div class="products_grid" id="wishlist_grid"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="big_row">
+                <img class="logo_footer" src="img/white_logo.png" alt="">
+                <p>Reda Store - a demo front-end project built with HTML, CSS and JavaScript.</p>
+                <div class="icons_footer">
+                    <a href="contact.html"><i class="fa-solid fa-phone"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Quick Links</h4>
+                <div class="links">
+                    <a href="account.html"><i class="fa-solid fa-caret-right"></i> Your Account</a>
+                    <a href="orders.html"><i class="fa-solid fa-caret-right"></i> Purchase History</a>
+                    <a href="cart.html"><i class="fa-solid fa-caret-right"></i> Shopping Cart</a>
+                    <a href="shop.html"><i class="fa-solid fa-caret-right"></i> All Products</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_footer">
+            <div class="container">
+                <p>&copy; <span>Reda Store.</span> All Rights Reserved.</p>
+                <div class="payment_img"><img src="img/payment_method.png" alt=""></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/data.js"></script>
+    <script src="JS/store.js"></script>
+    <script src="JS/pages.js"></script>
+</body>
+</html>

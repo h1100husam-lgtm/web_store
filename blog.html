@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Reda Store</title>
+    <link rel="icon" href="img/icon.png">
+
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/pages.css">
+</head>
+<body>
+
+    <header>
+        <div class="top_header">
+            <div class="container">
+                <a href="index.html" class="logo"> <img src="img/logo.png" alt="Reda Store logo"></a>
+
+                <form action="" class="search_box">
+                    <div class="select_box">
+                        <select id="category" name="category">
+                            <option value="All Categories">All Categories</option>
+                            <option value="electronics">Electronics &amp; Digital</option>
+                            <option value="mobiles">Phones &amp; Tablets</option>
+                            <option value="appliances">Home Appliances</option>
+                        </select>
+                    </div>
+                    <input type="text" name="search" id="search" placeholder="Search for Products" required>
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
+                <div class="header_icons">
+                    <div class="icon">
+                        <a href="wishlist.html"><i class="fa-regular fa-heart"></i><span class="count count_favourite">0</span></a>
+                    </div>
+                    <div onclick="open_close_cart()" class="icon">
+                        <i class="fa-solid fa-cart-shopping"></i><span class="count count_item_header">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_header">
+            <div class="container">
+                <nav class="nav">
+                    <span onclick="open_Menu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
+                    <div class="category_nav">
+                        <div onclick="Open_Categ_list()" class="category_btn">
+                            <i class="fa-solid fa-bars"></i>
+                            <p>Browse Category</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="category_nav_list"></div>
+                    </div>
+                    <ul class="nav_links">
+                        <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="shop.html">Accesories</a></li>
+                        <li class="active"><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="login_signup btns"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page_head">
+        <div class="container">
+            <h1>Blog</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a><i class="fa-solid fa-angle-right"></i><span>Blog</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="page_section">
+        <div class="container">
+            <div class="products_grid" id="blog_grid"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="bottom_footer">
+            <div class="container">
+                <p>&copy; <span>Reda Store.</span> All Rights Reserved.</p>
+                <div class="payment_img"><img src="img/payment_method.png" alt=""></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/data.js"></script>
+    <script src="JS/store.js"></script>
+    <script>
+        const posts = [
+            { title: "How to choose the right laptop for work", img: "img/product/2.png", text: "CPU, RAM and storage are the three things that decide how fast your laptop feels. Here is a simple way to balance them with your budget." },
+            { title: "Smartphone battery: myths and facts", img: "img/product/1.png", text: "Charging overnight, closing apps, lowering brightness - which of these actually save battery life?" },
+            { title: "Washing machine sizes explained", img: "img/product/16.png", text: "8kg is the sweet spot for most families. Learn how load size affects water, power and clothes care." },
+            { title: "4K TV: is it worth the upgrade?", img: "img/product/0.png", text: "Resolution is not everything. Contrast, panel type and viewing distance matter just as much." },
+            { title: "Kitchen appliances that save time", img: "img/product/13.png", text: "A rice cooker, a kettle and a food processor cover most daily cooking needs without taking up counter space." },
+            { title: "Gaming monitors: refresh rate vs resolution", img: "img/product/24.png", text: "165Hz on Full HD feels smoother than 60Hz on QHD. Here is why, and when to prioritise which." }
+        ];
+
+        document.getElementById("blog_grid").innerHTML = posts.map(function (post) {
+            return (
+                '<div class="product blog_card">' +
+                    '<div class="img_product"><img src="' + post.img + '" alt=""></div>' +
+                    '<p class="name_product">' + post.title + "</p>" +
+                    '<p class="blog_text">' + post.text + "</p>" +
+                    '<a href="shop.html" class="btn btn_sm">Read more</a>' +
+                "</div>"
+            );
+        }).join("");
+    </script>
+</body>
+</html>

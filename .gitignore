@@ -1,0 +1,13 @@
+# dependencies (none needed, but kept for safety)
+node_modules/
+
+# logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
